@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+</head>
+<body>
+    <div class="container">
+        <div id="part1">
+            <a href="#">
+                Click me
+            </a>
+        </div>
+        <div id="part2">
+            <li><video height="200px" width="200px" controls><source src="Cat_Boarding.mp4" type="video/mp4"></video></li>
+            <li><video height="200px" width="200px" controls><source src="Cat_Boarding.mp4" type="video/mp4"></video></li>
+            <li><video height="200px" width="200px" controls><source src="Cat_Boarding.mp4" type="video/mp4"></video></li>
+            <li><video height="200px" width="200px" controls><source src="Cat_Boarding.mp4" type="video/mp4"></video></li>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("part1").addEventListener("click",hideDiv);
+        function hideDiv () {
+            let x = document.getElementById("part2");
+            if(x.style.display === "none" || x.style.display === ""){
+                x.style.display = "flex";
+                x.style.transform = "translateX(0)"
+            }else {
+                x.style.display = "none";
+                x.style.transform = "translateX(-100vw)"
+            }
+        }
+    </script>
+</body>
+</html>
