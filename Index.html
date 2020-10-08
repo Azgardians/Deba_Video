@@ -25,12 +25,12 @@
         document.getElementById("part1").addEventListener("click",hideDiv);
         function hideDiv () {
             let x = document.getElementById("part2");
-            if(x.style.display === "none" || x.style.display === ""){
-                x.style.display = "flex";
-                x.style.transform = "translateX(0)"
+            console.log(x.style.opacity)
+            console.log(typeof(x.style.opacity))
+            if(x.style.opacity === "0" || x.style.opacity === ""){
+                x.style.opacity = 1;
             }else {
-                x.style.display = "none";
-                x.style.transform = "translateX(-100vw)"
+                x.style.opacity = 0;
             }
         }
     </script>
